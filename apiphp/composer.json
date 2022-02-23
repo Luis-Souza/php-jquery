@@ -1,0 +1,26 @@
+{
+    "name": "jorge_souza/apiphp",
+    "scripts": {
+        "dev": "php -S localhost:3000 -t public"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jorge Souza",
+            "email": "jorgeluis0796@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.5",
+        "php-di/php-di": "^6.3",
+        "php-di/slim-bridge": "^3.2",
+        "mongodb/mongodb": "^1.5",
+        "respect/validation": "^2.2"
+    }
+}

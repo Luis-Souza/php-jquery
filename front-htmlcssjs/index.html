@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" type="text/css" href="global.css">
+
+  <title>Home</title>
+</head>
+<body>
+
+  <div class="modal fade" id="modalNewUser" tabindex="-1">
+    <div class="modal-content">
+      <div class="modal-close">
+        <button id="close-modal">x</button>
+      </div>
+      <div class="modal-body">
+        <form id="users-form">
+          <div class="form-group">
+            <span class="title-group">Identificação</span>
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="name">Nome</label>
+                <input type="text" class="form-control" id="name" placeholder="Nome" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="last_name">Sobrenome</label>
+                <input type="text" class="form-control" id="last_name" placeholder="Sobrenome" required>
+              </div>
+            </div>
+  
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="email">Email <span style="Color: red;">*</span></label>
+                <input type="text" class="form-control" id="email" placeholder="E-mail" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="birth_date">Data de Nascimento</label>
+                <input type="date" class="form-control" id="birth_date" required>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="form-group">
+            <span class="title-group">Endereço</span>
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="public_place">Logradouro</label>
+                <input type="text" class="form-control" id="public_place" placeholder="Logradouro" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="number">Número</label>
+                <input type="number" class="form-control" id="number" required>
+              </div>
+            </div>
+  
+            <div class="form-row mb-3">
+              <div class="col">
+                <label for="complement">Complemento</label>
+                <input type="text" class="form-control" id="complement" placeholder="Complemento" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="district">Bairro</label>
+                <input type="text" class="form-control" id="district" placeholder="Bairro" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="cep">CEP</label>
+                <input type="text" class="form-control" id="cep" placeholder="00000-000" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="city">Cidade</label>
+                <input type="text" class="form-control" id="city" placeholder="Cidade" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="state">Estado</label>
+                <input type="text" class="form-control" id="state" placeholder="Estado" required>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" id="b-submit" class="primary ml-2">Salvar</button>
+      </div>
+    </div>
+  </div>
+  
+  <header class="header-container">
+    <div class="header-content">
+      <input type="text" class="form-control" name="search" id="search"
+        placeholder="Busque por nome..."
+      >
+      <button type="button" id="b-search">Buscar</button>
+    </div>
+  </header>
+
+  <main id="root">
+    <header id="d-header">
+      <h2>DASHBOARD</h2>
+      <button class="primary" id="open-modal">Adicionar</button>
+    </header>
+    <section id="section-users">
+      <table class="table table-striped" id="users-table">
+        <thead id="thead">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Sobrenome</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Data de Nascimento</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8-beta.7/jquery.inputmask.min.js" defer></script>
+  <script type="text/javascript" src="./scripts/modal.js" defer></script>
+  <script type="text/javascript" src="./scripts/request.js" defer></script> 
+  <script type="text/javascript" src="./scripts/main.js" defer></script>
+
+</body>
+</html>
